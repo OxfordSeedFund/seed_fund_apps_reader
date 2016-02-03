@@ -1,0 +1,64 @@
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h1>Application <%= @app.id %>: <%= @app.company_name %></h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="<%= root_path %>">Full List</a>
+        </li>
+        <% if @member %>
+            <li>
+                <a href="<%= member_path(@member) %>"><%= @member.name %>'s Apps</a>
+            </li>
+        <% end %>
+        <li class="active">
+            <strong>Application <%= @app.id %></strong>
+        </li>
+    </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+<div class="row animated fadeInRight">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Application Details</h5>
+            </div>
+            <div class="ibox-content border-left-right">
+                <p><strong>Founder Name: </strong><%= @app.founder_name %></p>
+                <p><strong>Founder Email: </strong><%= @app.founder_email %></p>
+                <p><strong>Founder Phone: </strong><%= @app.founder_phone %></p>
+                <p><strong>Sole Founder or Co-Founder?: </strong><%= @app.num_founders %></p>
+                <p><strong>Are you working on this full-time? : </strong><%= @app.full_time  %></p>
+                <p><strong>If not working full-time, how many hours/ week? When do you plan to go full-time?: </strong><%=  @app.hours == nil ? " N/A" : @app.hours %></p>
+                <p><strong>Describe each member of the founding team: </strong><%= @app.team_descrip %></p>
+                <p><strong>Linkedin URL(s) for all key team members: </strong><%= @app.linkedin %></p>
+                <p><strong>University connection: </strong><%= @app.uni_connection %></p>
+                <p><strong>If other, please specify: </strong><%= @app.other_connection  == nil ? " N/A" : @app.other_connection %></p>
+                <p><strong>Academic Division: </strong><%= @app.academ_dept == nil ? "No Answer" : @app.academ_dept %></p>
+                <p><strong>If you answered 'more than one' above, please give further information here: </strong><%= @app.other_academ_dept  == nil ? " N/A" : @app.other_academ_dept %></p>
+                <p><strong>Company/idea name: </strong><%= @app.company_name %></p>
+                <p><strong>Company website: </strong><%= @app.company_url %></p>
+                <p><strong>Provide a brief description of your product or service: </strong><%= @app.company_descrip %></p>
+                <p><strong>Give a brief history of your company. How did you come up with this idea? Why are you the team to address this idea? How long has the team worked on this together?: </strong><%= @app.company_history %></p>
+                <p><strong>What progress have you made with your idea/business?: </strong><%= @app.company_progress %></p>
+                <p><strong>Who are your customers, how do you reach them? What's the size of the market?: </strong><%= @app.company_market %></p>
+                <p><strong>How will you make money?: </strong><%= @app.company_monetization %></p>
+                <p><strong>How much funding are you seeking from Seed Fund? How will you use it? How ill this funding be catalytic to your business?: </strong><%= @app.company_funding %></p>
+                <p><strong>What are your key business targets for the next year?: </strong><%= @app.company_targets %></p>
+                <p><strong>Who are your major competitors? Why are you different: </strong><%= @app.company_competitors %></p>
+                <p><strong>External funding already received: </strong><%= @app.company_ext_fund %></p>
+                <p><strong>How did you hear about the Seed Fund?: </strong><%= @app.how_hear %></p>
+                <p><strong>Is there anything else you'd like to tell us?: </strong><%= @app.anything_else %></p>
+                <p><strong>Time & Date Submitted: </strong><%= @app.time %></p>
+                <p><strong>IP Address: </strong><%= @app.ip %></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
