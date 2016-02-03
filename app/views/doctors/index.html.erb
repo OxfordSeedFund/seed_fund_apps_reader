@@ -1,0 +1,54 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-9">
+        <h2>Doctors</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="">Home</a>
+        </li>
+        <li class="active">
+            <strong>Doctors</strong>
+        </li>
+    </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <% for doctor in @doctors %>
+        <div class="col-lg-4">
+            <div class="contact-box">
+                <a href="<%= doctor_path(doctor) %>">
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <%= image_tag 'doctor_placeholder.jpg', class: 'img-circle m-t-xs img-responsive'%>
+                        <div class="m-t-xs font-bold"><%= doctor.speciality %></div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <h3><strong>Dr. <%= doctor.name %></strong></h3>
+                    <p><i class="fa fa-map-marker"></i> <%= doctor.practice.postal %></p>
+                    <address>
+                        <strong><%= doctor.practice.name %></strong><br>
+                        <%= doctor.practice.street %><br>
+                        <%= doctor.practice.city+", "+doctor.practice.postal %><br>
+                        <abbr title="Phone">P:</abbr> <%= doctor.phone %>
+                    </address>
+                </div>
+                <div class="clearfix"></div>
+            </a>
+            </div>
+        </div>
+    <% end %>
+</div>
+</div>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+
+    $(function () {
+        $('.contact-box').each(function () {
+            animationHover(this, 'pulse');
+        });
+    });
+    </script>
+<% end %>
+

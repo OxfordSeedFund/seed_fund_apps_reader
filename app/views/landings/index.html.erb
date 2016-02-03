@@ -1,0 +1,365 @@
+<div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+<div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="border-color:#fff">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<%= url_for :controller => 'landings', :action => 'index' %>">HumanHealth</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a class="page-scroll" href="/">Home</a></li>
+                    <li><a href="<%= url_for carehome_path %>">Care Homes</a></li>
+<!--                     <li><a href="<%= url_for motherbaby_path %>">Mother & Baby</a></li>
+                    <li><a href="<%= url_for doctordirectory_path %>">My Doctor</a></li>
+ -->                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div>
+    <div class="carousel-caption video-version" style="text-align:center">
+        <h1>Human Health</h1>
+        <p>Better, more convenient and cost-<br>effective care for care homes</p>
+    </div>
+     <video loop muted autoplay class="fullscreen-bg__video">
+        <source src="<%= image_path('index.webm') %>" type="video/webm">
+        <source src="<%= image_path('index.mp4') %>" type="video/mp4">
+        <source src="<%= image_path('index.ogg') %>" type="video/ogg">
+    </video>
+</div>
+
+<div class="modal inmodal text-center" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated fadeIn">
+            <div class="modal-body" style="max-height: 350px; overflow-y: auto;">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h1 class="modal-title">Thank You for reaching out!<br>We'll get back to you shortly.</h1>
+                <h2>If you have any further questions,<br>please contact chris@humnhealth.com.</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container services">
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <div class="navy-line" style="margin-top:0;"></div>
+        <h1>We bring quality, convenient, and affordable healthcare<br/>to private & NHS patients<span class="navy"> through online telemedicine solutions. </span> </h1>
+        <p>Human Health takes protracted, complex, and expensive systems and transforms them into convenient, simple and affordable systems.<br>We provide simple, affordable and radical online and real-world healthcare solutions for the Care Homes, New Mothers and UK General Practice.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 text-center wow fadeInLeft">
+        <div class="m-t-lg">
+            <i class="fa fa-line-chart features-icon"></i>
+            <h2>Better</h2>
+            <p>Human Health can help General Practices to improve their productivity by up to 25% and patient satisfaction by more than 15%.</p>
+        </div>
+        <div>
+            <i class="fa fa-clock-o features-icon"></i>
+            <h2>Quicker</h2>
+            <p>HumanHealth uses technology to quickly bring local GP and specialist care face-to-face with care home residents, new mothers, patients and relatives. Systems that took a few costly weeks instead take a few hours.</p>
+        </div>
+    </div>
+    <div class="col-md-6 text-center  wow zoomIn">
+        <img src="<%= image_path('phone.png') %>" alt="phone" class="img-responsive" style="margin-top:50px">
+    </div>
+    <div class="col-md-3 text-center wow fadeInRight">
+
+        <div class="m-t-lg">
+            <i class="fa fa-heart features-icon"></i>
+            <h2>Kinder</h2>
+            <p>Care home residents get managed from the comfort of home, relatives can be engaged remotely in decision making and ultimately patients can get the care they need from the people they want.</p>
+        </div>
+        <div>
+            <i class="fa fa-gbp features-icon"></i>
+            <h2>Lower Costs</h2>
+            <p>Hospitals have fewer expensive and avoidable admissions and the NHS/CCGs benefit from huge cost savings.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row text-center wow fadeInDown" style="padding-top:50px;">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h2 style="text-transform: none;">Our Care Home Solutions</h2>
+        <img src="<%= image_path('carehome.png') %>" class="img-responsive img-square" alt="" width="80%" style="padding-left:20%">
+        <p style="padding-top:10px">Technology to facilitate rapid and efficient communication between carers, patients, their relatives and doctors.</p>
+        <p><br><a class="'btn btn-primary" href="<%= url_for :controller => 'landings', :action => 'carehome' %>" role="button">Learn More</a></p>
+    </div>
+<!--     <div class="col-sm-4">
+        <h2 style="text-transform: none;">Lactaction Consultations</h2>
+        <img src="<%= image_path('motherbaby.png') %>" class="img-responsive img-square" alt="" width="80%" style="padding-left:20%">
+        <p style="padding-top:10px">Speak to one of the UKs leading lactation consultants from the comfort of your own home.</p>
+        <p><br><a class="'btn btn-primary" href="<%= url_for :controller => 'landings', :action => 'motherbaby' %>" role="button">Go To Mother & Baby</a></p>
+    </div>
+    <div class="col-sm-4">
+        <h2 style="text-transform: none;">Primary Care Consultations</h2>
+        <img src="<%= image_path('doctor.png') %>" class="img-responsive img-square" alt="" width="80%" style="padding-left:20%">
+        <p style="padding-top:10px">The fastest and easiest way to get care from some of the country’s top physicians.</p>
+        <p><br><a class="'btn btn-primary" href="<%= url_for :controller => 'landings', :action => 'doctordirectory' %>" role="button">Go To My Doctor</a></p>
+    </div>
+ --></div>
+</section>
+
+<section id="team" class="gray-section team" style="padding-top:40px; padding-bottom: 80px">
+<div class="container">
+    <div class="row m-b-lg">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Our Team</h1>
+            <p>We care about better, kinder and more cost effective care. Our experience ranges from frontline GP services to technology implementation<br>within the NHS,and we use our understanding of a caring but strained system to improve quality of care for patients.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-1 wow fadeInDown">
+            <div class="team-member">
+                <img src="<%= image_path('alexander.png') %>" class="img-responsive img-circle" alt="" width="100%">
+                <h4><span class="navy">Alexander</span> Finlayson</h4>
+                <p>Director</p>
+                <ul class="list-inline social-icon">
+                    <li><a href="https://uk.linkedin.com/in/alexanderfinlayson"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-2 wow fadeInDown">
+            <div class="team-member">
+                <img src="<%= image_path('chris2.jpg') %>" class="img-responsive img-circle" alt="" width="100%">
+                <h4><span class="navy">Chris</span> Tan</h4>
+                <p>Operations Lead</p>
+                <ul class="list-inline social-icon">
+                    <li><a href="https://uk.linkedin.com/in/chris-tan-851009109"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-2 wow fadeInDown">
+            <div class="team-member">
+                <img src="<%= image_path('melissa3.png') %>" class="img-responsive img-circle" alt="" width="100%">
+                <h4><span class="navy">Melissa</span> McCoy</h4>
+                <p>Technology Lead</p>
+                <ul class="list-inline social-icon">
+                    <li><a href="https://uk.linkedin.com/in/melissalmccoy"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-2 wow fadeInDown">
+            <div class="team-member">
+                <img src="<%= image_path('nihal.png') %>" class="img-responsive img-circle" alt="" width="100%">
+                <h4><span class="navy">Nihal</span> Sinha</h4>
+                <p>Advisor</p>
+                <ul class="list-inline social-icon">
+                    <li><a href="https://www.linkedin.com/in/nihalsinha1"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-2 wow fadeInDown">
+            <div class="team-member">
+                    <img src="<%= image_path('justin.png') %>" class="img-responsive img-circle" alt="" width="100%">
+                    <h4><span class="navy">Justin</span> Amery</h4>
+                    <p>Primary Care</p>
+                    <ul class="list-inline social-icon">
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-top: 0; padding-top: 20px">
+    <div class="row">
+        <div class="col-lg-12 text-center wow zoomIn" >
+            <h1>
+                Our Partners
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <a href="http://www.buryknowle.org/"><%= image_tag "nhs_logo.png", width: "70%", class: "img-responsive", style:"margin-left:15%"%></a>
+        </div>
+</div>
+</section>
+
+<section class="comments navy-section" style="margin-top: 0">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>What our patients & partners say</h1>
+            <p>We serve patients through online consultations, help doctors grow their practices, support new mothers through newborn challenges, and allow care homes to better serve their residents.</p>
+        </div>
+    </div>
+    <div class="row features-block wow fadeInUp">
+        <div class="col-lg-4">
+            <div class="bubble" style="color: black;">
+                "Care home residents often end up in hospital simply because it's the path of least of resistance. This can cost patients a protracted & unwanted stay in hospital. Human Health is a kinder, better & more cost effective alternative."
+            </div>
+            <div class="comments-avatar">
+                <div class="media-body">
+                    <div class="commens-name">
+                    <i class="fa fa-user-md" style="color:#fff"> </i>
+                          Sarah Farmer
+                    </div>
+                    <small class="text-muted">Primary Care Worker, Oxford</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="bubble" style="color: black;">
+                "General Practice is always changing, but never actually changes. It's always fundamentally about providing the best care we can for our patients. If we can hold on to that, it is much easier to embrace innovation & evolution in our methods of caring. Human Health is trying to make this possible."
+            </div>
+            <div class="comments-avatar">
+                <div class="media-body">
+                    <div class="commens-name">
+                    <i class="fa fa-user-md" style="color:#fff"></i>
+                        Dr Justin Amery
+                    </div>
+                    <small class="text-muted">Senior Partner, Bury Knowle Surgery, Oxford</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="bubble" style="color: black;">
+                “Vanessa’s (Human Health’s CLO) expertise, dedication and caring manner helped me through so much, when I really thought there was nothing else I could do.”
+            </div>
+            <div class="comments-avatar">
+                <div class="media-body">
+                    <div class="commens-name">
+                    <i class="fa fa-user" style="color:#fff"> </i>
+                         Jessica
+                    </div>
+                    <small class="text-muted">New Mother, Cotswolds</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<section id="contact" class="gray-section contact" style="margin-top:0;">
+<div class="container">
+    <div class="row m-b-lg">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Contact Us</h1>
+            <p>We'd love to tell you more about Human Health and answer any of your questions.</p>
+        </div>
+    </div>
+    <div class="row m-b-lg">
+        <div class="col-lg-3 col-lg-offset-3">
+            <address>
+                <strong><span class="navy">Human Health</span></strong><br/>
+                Based in London & Oxford
+            </address>
+        </div>
+        <div class="col-lg-4">
+            <p class="text-color">
+                Human Health is a UK-incorporated limited liability company based in Oxford. We are passionate about improving care and reducing costs in the UK healthcare system. We believe technology is one of the key answers.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <a href="mailto:chris@humnhealth.com" class="btn btn-primary">Send Us an Email</a>
+<!--             <p class="m-t-sm">
+                Or follow us on social media.
+            </p>
+            <ul class="list-inline social-icon">
+                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+            </ul>
+ -->        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+            <p><strong>Human Health &copy; 2015</strong><br/>Optimising Human <strong>Kind</strong></p>
+        </div>
+    </div>
+</div>
+</section>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(document).ready(function () {
+    var anchor_value;
+    var stripped_url = document.location.toString().split("#");
+    if (stripped_url.length > 1)
+        anchor_value = stripped_url[1];
+    if (anchor_value == "contact-confirm")
+        $("#contactModal").modal('show');
+
+    $('body').addClass('landing-page');
+    $('body').attr('id', 'page-top');
+
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 80
+    });
+
+    // Page scrolling feature
+    $('a.page-scroll').bind('click', function(event) {
+        var link = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(link.attr('href')).offset().top - 50
+        }, 500);
+        event.preventDefault();
+    });
+
+    var cbpAnimatedHeader = (function() {
+        var docElem = document.documentElement,
+                header = document.querySelector( '.navbar-default' ),
+                didScroll = false,
+                changeHeaderOn = 200;
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+        init();
+
+    })();
+
+    new WOW().init();
+});
+
+
+</script>
+
+<% end %>

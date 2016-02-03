@@ -1,0 +1,32 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold"><%= image_tag("logo.png", width:'100%', class: 'img-responsive') %></strong>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <!-- <a class="navbar-minimalize" href="#"></a> -->
+                <div class="logo-element">
+                    HH
+                </div>
+            </li>
+            <li class="<%= 'active' if current_page?('/') %>">
+                <%= link_to "/" do %>
+                <i class="fa fa-user-md"></i> <span class="nav-label">Find A Doctor</span>
+                <% end %>
+            </li>
+            <li class="<%= 'active' if current_page?('/home/minor') %>">
+                <%= link_to "/" do %>
+                <i class="fa fa-video-camera"></i> <span class="nav-label">Video Consult a Doctor</span>
+                <% end %>
+            </li>
+        </ul>
+
+    </div>
+</nav>
