@@ -927,7 +927,7 @@ table.dataTable thead .sorting:after {
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid #0064b7;
+  border: 2px solid #000000;
   border-radius: 3px;
 }
 
@@ -960,7 +960,7 @@ table.dataTable thead .sorting:after {
 .onoffswitch-inner:before {
   content: "ON";
   padding-left: 7px;
-  background-color: #0064b7;
+  background-color: #000000;
   color: white;
 }
 
@@ -977,7 +977,7 @@ table.dataTable thead .sorting:after {
   width: 18px;
   margin: 0px;
   background: white;
-  border: 2px solid #0064b7;
+  border: 2px solid #000000;
   border-radius: 3px;
   position: absolute;
   top: 0;

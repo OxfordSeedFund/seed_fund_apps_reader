@@ -1,4 +1,5 @@
 class AppsController < ApplicationController
+  before_action :check_for_lockup
   def index
     @apps = App.all
     @members = Member.all
