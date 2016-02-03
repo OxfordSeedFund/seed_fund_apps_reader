@@ -18,15 +18,29 @@
             </li>
             <li class="<%= 'active' if current_page?('/') %>">
                 <%= link_to "/" do %>
-                <i class="fa fa-user-md"></i> <span class="nav-label">Find A Doctor</span>
+                <i class="fa fa-file"></i> <span class="nav-label">Full App List</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
-                <%= link_to "/" do %>
-                <i class="fa fa-video-camera"></i> <span class="nav-label">Video Consult a Doctor</span>
-                <% end %>
-            </li>
+            <% for member in @members %>
+                <li class="<%= 'active' if request.env['PATH_INFO'].include?("/members/"+member.id.to_s) %>">
+                    <%= link_to member_path(member) do %>
+                        <i class="fa fa-file"></i> <span class="nav-label"><%= member.name %></span>
+                        <span class="fa arrow"></span>
+                    <% end %>
+                    <ul class="nav nav-second-level">
+                        <% for app in member.apps %>
+                            <li class="<%= 'active' if current_page?(member_app_path(member.id, app.id)) %>">
+                                <%= link_to member_app_path(member.id, app.id) do %><i class="fa fa-file-text"></i> Application <%= app.id %><% end %>
+                            </li>
+                        <% end %>
+                    </ul>
+                </li>
+            <% end %>
         </ul>
-
     </div>
 </nav>
+<script type="text/javascript">
+$('li').hasClass("active").parent()
+})
+
+</script>
