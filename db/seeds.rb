@@ -13,7 +13,7 @@ Member.create(name:"Andrea")
 Member.create(name:"Ana-Maria")
 
 # CREATE APPS: Outputs [{"1"=>col_1_value,"2"=>col_2_value},{..row2...},{...row3..}]
-apps_array_of_row_hashes = CSV.read('db/seed_fund_apps_v4.csv', :encoding => 'windows-1251:utf-8', :headers => true, :header_converters => :symbol, :converters => :all).map {|row| Hash[row.map{|row_head,row_val| [row_head,row_val]}]}
+apps_array_of_row_hashes = CSV.read('db/seed_fund_apps_v5_additional.csv', :encoding => 'windows-1251:utf-8', :headers => true, :header_converters => :symbol, :converters => :all).map {|row| Hash[row.map{|row_head,row_val| [row_head,row_val]}]}
 apps_array_of_row_hashes.each { |row| App.create(row) }
 
 ## ASSOCIATE APPS WITH MEMBERS
